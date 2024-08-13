@@ -165,18 +165,30 @@ namespace RocketUI
         // btnBaglantiyiBitir_Click  was done.
         private void btnBaglantiyiBitir_Click(object sender, EventArgs e)
         {
-            if (serialPort_YerIst.IsOpen)
+
+            try
             {
-                serialPort_YerIst.Close();
-                lblDurum.Text = "Baglanti Yok!";
+                if (serialPort_YerIst.IsOpen)
+                {
+                    //serialPort_YerIst.DiscardInBuffer();
+                    //serialPort_YerIst.DiscardOutBuffer();
+                    serialPort_YerIst.ReadTimeout = 500; // 500 ms
+                    serialPort_YerIst.WriteTimeout = 500; // 500 ms
+                    serialPort_YerIst.Close();
+                    lblDurum.Text = "Baglanti Yok!";
+                }
+                else
+                {
+                    lblDurum.Text = "Cihaz Baglantisi Koptu!";
+                }
+                btnBaglan.Enabled = true;
+                btnBaglantiyiBitir.Enabled = false;
+                lblDurum.ForeColor = Color.Red;
             }
-            else
+            catch (Exception ex)
             {
-                lblDurum.Text = "Cihaz Baglantisi Koptu!";
+                MessageBox.Show(ex.Message, "Error occured while closing port");
             }
-            btnBaglan.Enabled = true;
-            btnBaglantiyiBitir.Enabled = false;
-            lblDurum.ForeColor = Color.Red;
         }
 
         private void btnHakemIletisim_Click(object sender, EventArgs e)
@@ -243,6 +255,7 @@ namespace RocketUI
                     patlama1_yes.Visible = true;
                     patlama2_no.Visible = true;
                     patlama2_yes.Visible = false;
+                    timer1.Start();
                     break;
                 case 3:
                     patlama1_no.Visible = false;
@@ -257,6 +270,13 @@ namespace RocketUI
              HYI kısmı eklenecek 
              refreshMap kısmı eklenecek
              */
+
+
+            try
+            {
+                RefreshMapToNewGPS();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString(), "Error While Refreshing GPS"); }
         }
 
         /*
@@ -361,6 +381,59 @@ namespace RocketUI
             
         }
 
+        private void RefreshMapToNewGPS() //.
+        {
+            UpdateMap(gMapMain, (double)GetPinValueDouble(PackageElements.GPSe_Ana), (double)GetPinValueDouble(PackageElements.GPSb_Ana));
+            gMapMain.ShowCenter = true;
+            UpdateMap(gMapPayload, (double)GetPinValueDouble(PackageElements.GPSe_Gorev), (double)GetPinValueDouble(PackageElements.GPSb_Gorev));
+            gMapPayload.ShowCenter = true;
+        }
+
+        List<PointLatLng> points_ana = new List<PointLatLng>();
+        List<PointLatLng> points_gorev = new List<PointLatLng>();
+
+        PointLatLng previousPoint_ana;
+        PointLatLng previousPoint_gorev;
+
+        private void UpdateMap(GMapControl gMapControl, double latitude, double longitude) //.
+        {
+            if (latitude != 0 && longitude != 0)
+            {
+                PointLatLng point = new PointLatLng(latitude, longitude);
+                GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_dot);
+                gMapControl.Overlays.Clear();
+                GMapOverlay overlay = new GMapOverlay("markers");
+                overlay.Markers.Add(marker);
+                gMapControl.Overlays.Add(overlay);
+                gMapControl.Position = point;
+
+
+                if (gMapControl == gMapMain)
+                {
+                    if (previousPoint_ana != null)
+                    {
+                        points_ana.Add(previousPoint_ana);
+                        points_ana.Add(point);
+                        GMapRoute route = new GMapRoute(points_ana, "route");
+                        overlay.Routes.Add(route);
+                    }
+                    previousPoint_ana = point;
+                }
+                else if (gMapControl == gMapPayload)
+                {
+                    if (previousPoint_gorev != null)
+                    {
+                        points_gorev.Add(previousPoint_gorev);
+                        points_gorev.Add(point);
+                        GMapRoute route = new GMapRoute(points_gorev, "route");
+                        overlay.Routes.Add(route);
+                    }
+                    previousPoint_gorev = point;
+                }
+            }
+        }
+
+
         public bool GetBit(byte bitNumber, byte b) => (b & (1 << bitNumber)) != 0; //.
 
         private void SetChartAtBegin(Chart chart1, String AxisY)
@@ -379,8 +452,29 @@ namespace RocketUI
 
         #region EVENTS
         // Form1 closing ekle
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (serialPort_YerIst.IsOpen)
+                {
+                    MessageBox.Show("Yer Istasyonu COM PORT baglantisini kapatmadiniz! Otomatik sonlandiriliyor...");
+                    serialPort_YerIst.ReadTimeout = 500; // 500 ms
+                    serialPort_YerIst.WriteTimeout = 500; // 500 ms
+                    serialPort_YerIst.Close();
+                }
+                /*if (SerialPort_HYI.IsOpen)
+                {
+                    MessageBox.Show("Hakem Istasyonu COM PORT baglantisini kapatmadiniz! Otomatik sonlandiriliyor...");
+                    SerialPort_HYI.Close();
+                }*/
+            }
+            catch (Exception ex) { MessageBox.Show("" + ex); }
+           // FileSaveThread?.Abort();
+          //  HYIDataSendThread?.Abort();
+        }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //.
         {
             // Main
             // GMapControl ayarları

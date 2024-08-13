@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -41,7 +42,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.numericUpDownBaudRate = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxComPort = new System.Windows.Forms.ComboBox();
@@ -49,12 +49,14 @@
             this.btnBaglan = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelBaglanti = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblHakemDurum = new System.Windows.Forms.Label();
             this.btnHakemIletisim = new System.Windows.Forms.Button();
             this.lblDosyaKayit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDosyayaKaydet = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.lblDurum = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -134,8 +136,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.gMapMain = new GMap.NET.WindowsForms.GMapControl();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.patlama2_yes = new System.Windows.Forms.PictureBox();
+            this.patlama1_yes = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.patlama2_no = new System.Windows.Forms.PictureBox();
+            this.patlama1_no = new System.Windows.Forms.PictureBox();
             this.chartAltitudeMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAltitudePayload = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartPressureMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -144,13 +151,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.patlama2_yes = new System.Windows.Forms.PictureBox();
-            this.patlama1_yes = new System.Windows.Forms.PictureBox();
-            this.patlama2_no = new System.Windows.Forms.PictureBox();
-            this.patlama1_no = new System.Windows.Forms.PictureBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBaudRate)).BeginInit();
             this.panelBaglanti.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -169,15 +169,15 @@
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownBaudRate
@@ -288,6 +288,23 @@
             this.panelBaglanti.Size = new System.Drawing.Size(2415, 73);
             this.panelBaglanti.TabIndex = 13;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Purple;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Agency FB", 18F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button2.Location = new System.Drawing.Point(1774, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(637, 47);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Hakem Yer Istasyonuna Baglan";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnHakemIletisim_Click);
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -375,6 +392,22 @@
             this.btnDosyayaKaydet.TabIndex = 8;
             this.btnDosyayaKaydet.Text = "Dosyaya Kaydetmeye Basla";
             this.btnDosyayaKaydet.UseVisualStyleBackColor = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblDurum
             // 
@@ -1447,6 +1480,41 @@
             this.panel3.Size = new System.Drawing.Size(1293, 454);
             this.panel3.TabIndex = 1000;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(936, 74);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(302, 235);
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // patlama2_yes
+            // 
+            this.patlama2_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_yes.BackgroundImage")));
+            this.patlama2_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama2_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama2_yes.Location = new System.Drawing.Point(309, 314);
+            this.patlama2_yes.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama2_yes.Name = "patlama2_yes";
+            this.patlama2_yes.Size = new System.Drawing.Size(67, 62);
+            this.patlama2_yes.TabIndex = 28;
+            this.patlama2_yes.TabStop = false;
+            // 
+            // patlama1_yes
+            // 
+            this.patlama1_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_yes.BackgroundImage")));
+            this.patlama1_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama1_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama1_yes.Location = new System.Drawing.Point(312, 112);
+            this.patlama1_yes.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama1_yes.Name = "patlama1_yes";
+            this.patlama1_yes.Size = new System.Drawing.Size(67, 62);
+            this.patlama1_yes.TabIndex = 27;
+            this.patlama1_yes.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -1464,6 +1532,30 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(213, 190);
             this.panel4.TabIndex = 24;
+            // 
+            // patlama2_no
+            // 
+            this.patlama2_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_no.BackgroundImage")));
+            this.patlama2_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama2_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama2_no.Location = new System.Drawing.Point(309, 314);
+            this.patlama2_no.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama2_no.Name = "patlama2_no";
+            this.patlama2_no.Size = new System.Drawing.Size(67, 62);
+            this.patlama2_no.TabIndex = 23;
+            this.patlama2_no.TabStop = false;
+            // 
+            // patlama1_no
+            // 
+            this.patlama1_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_no.BackgroundImage")));
+            this.patlama1_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama1_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama1_no.Location = new System.Drawing.Point(312, 112);
+            this.patlama1_no.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama1_no.Name = "patlama1_no";
+            this.patlama1_no.Size = new System.Drawing.Size(67, 62);
+            this.patlama1_no.TabIndex = 22;
+            this.patlama1_no.TabStop = false;
             // 
             // chartAltitudeMain
             // 
@@ -1598,98 +1690,6 @@
             this.label36.TabIndex = 1006;
             this.label36.Text = "Basınç Görev";
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Purple;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Agency FB", 18F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(1774, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(637, 47);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Hakem Yer Istasyonuna Baglan";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btnHakemIletisim_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(936, 74);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(302, 235);
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
-            // patlama2_yes
-            // 
-            this.patlama2_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_yes.BackgroundImage")));
-            this.patlama2_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama2_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_yes.Location = new System.Drawing.Point(309, 314);
-            this.patlama2_yes.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama2_yes.Name = "patlama2_yes";
-            this.patlama2_yes.Size = new System.Drawing.Size(67, 62);
-            this.patlama2_yes.TabIndex = 28;
-            this.patlama2_yes.TabStop = false;
-            // 
-            // patlama1_yes
-            // 
-            this.patlama1_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_yes.BackgroundImage")));
-            this.patlama1_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama1_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_yes.Location = new System.Drawing.Point(312, 112);
-            this.patlama1_yes.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama1_yes.Name = "patlama1_yes";
-            this.patlama1_yes.Size = new System.Drawing.Size(67, 62);
-            this.patlama1_yes.TabIndex = 27;
-            this.patlama1_yes.TabStop = false;
-            // 
-            // patlama2_no
-            // 
-            this.patlama2_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_no.BackgroundImage")));
-            this.patlama2_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama2_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_no.Location = new System.Drawing.Point(309, 314);
-            this.patlama2_no.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama2_no.Name = "patlama2_no";
-            this.patlama2_no.Size = new System.Drawing.Size(67, 62);
-            this.patlama2_no.TabIndex = 23;
-            this.patlama2_no.TabStop = false;
-            // 
-            // patlama1_no
-            // 
-            this.patlama1_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_no.BackgroundImage")));
-            this.patlama1_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama1_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_no.Location = new System.Drawing.Point(312, 112);
-            this.patlama1_no.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama1_no.Name = "patlama1_no";
-            this.patlama1_no.Size = new System.Drawing.Size(67, 62);
-            this.patlama1_no.TabIndex = 22;
-            this.patlama1_no.TabStop = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
-            this.btnRefresh.TabIndex = 7;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1712,6 +1712,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBaudRate)).EndInit();
             this.panelBaglanti.ResumeLayout(false);
@@ -1743,15 +1744,15 @@
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
