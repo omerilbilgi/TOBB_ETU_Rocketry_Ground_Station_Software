@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using LiveCharts;
-using LiveCharts.WinForms;
-using LiveCharts.Wpf;
+using System.IO;
 
 using System.IO.Ports;
 using System.Globalization;
@@ -44,13 +42,19 @@ namespace RocketUI
         public readonly string filenameRoket = "RoketValues.csv";
         // GÜNCELLENECEK /
 
-        private SerialPort serialPort_YerIst;
+        private SerialPort serialPort_YerIst = new SerialPort();
+        SerialPort SerialPort_HYI = new SerialPort();
+
+        public static string HYI_Port = "";
+        public static int HYI_BaudRate = 19200;
+        public static int HYI_DataBits = 8;
+        public static int HYI_StopBits = 1;
+        public static int HYI_Parity = 0;
 
         private readonly string dataTitles = "packageNum_Ana,patlama1,patlama2,Irtifa_basinc_Ana,GPSIrtifa_Ana,basinc_Ana,X_jiro,Y_jiro,Z_jiro,X_ivme,Y_ivme,Z_ivme,Aci_Ana,GPSe_Ana,GPSb_Ana,GPSSatNum_ana,packageNum_Gorev,GPSIrtifa_Gorev,sicaklik_Gorev,nem_Gorev,basinc_Gorev,GPSe_Gorev,GPSb_Gorev,GPSSatNum_Gorev";
         private string recivedData = "0,0,0,0,0,0,0,0,0,0,0,0,0,39.9103241,32.8529681,0,0,0,0,0,0,39.9103241,32.8529681,0";
         private string[] values = new string[DATA_COUNT];
 
-       // private Random random = new Random();
         public Form1()
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
@@ -59,12 +63,13 @@ namespace RocketUI
             //InitializeCharts();
 
 
-            timer1.Start();
+            //timer1.Start();
             FetchAvailablePorts();
             values = recivedData.Split(',');
+            btnBaglantiyiBitir.Enabled = false;
         }
-
-
+        // baglantı was done.
+        #region BAGLANTI BASLATMA / BITIRME 
         //FetchAvailablePorts  was done.
         private void FetchAvailablePorts()
         {
@@ -85,7 +90,7 @@ namespace RocketUI
             }
         }
 
-        private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e) //.
         {
             try
             {
@@ -191,17 +196,128 @@ namespace RocketUI
             }
         }
 
-        private void btnHakemIletisim_Click(object sender, EventArgs e)
+        Thread HYIDataSendThread = null;
+        private void btnHakemIletisim_Click(object sender, EventArgs e) //.
         {
-            using (HYI hyi = new HYI())
+            if (HYIDataSendThread == null)
             {
-                /*
-                 * hyi kısmı burası dolacak
-                 */
-                
+                using (HYI hyi = new HYI())
+                {
+                    if (hyi.ShowDialog() == DialogResult.OK)
+                    {
+                        HYI_Port = hyi.HYI_Port();
+                        HYI_BaudRate = hyi.HYI_BaudRate();
+                        HYI_DataBits = hyi.HYI_DataBits();
+                        HYI_StopBits = hyi.HYI_StopBits();
+                        HYI_Parity = hyi.HYI_Parity();
+                        HYI_Baglan();
+                    }
+
+                }
+            }
+            else
+            {
+                if (SerialPort_HYI.IsOpen)
+                {
+                    SerialPort_HYI.ReadTimeout = 500; // 500 ms
+                    SerialPort_HYI.WriteTimeout = 500; // 500 ms
+                    SerialPort_HYI.Close();
+                    MessageBox.Show("Bağlantı Sonlandırılıyor");
+                }
+                lblHakemDurum.Text = "Bağlantı Sonlandırıldı!";
+                lblHakemDurum.ForeColor = Color.White;
+                btnHakemIletisim.Text = "Hakem Yer Istasyonuna Baglan";
+                HYIDataSendThread?.Abort();
+                HYIDataSendThread = null;
             }
         }
-            private void ValueUpdate()
+
+        public void HYI_Baglan() //.
+        {
+            SerialPort_HYI = new SerialPort();
+            if (HYI_Port != null && HYI_Port != "")
+            {
+                try
+                {
+                    SerialPort_HYI.PortName = HYI_Port;
+                    SerialPort_HYI.BaudRate = HYI_BaudRate;
+                    SerialPort_HYI.Parity = (Parity)HYI_Parity;
+                    SerialPort_HYI.DataBits = HYI_DataBits;
+                    SerialPort_HYI.StopBits = (StopBits)HYI_StopBits;
+                    SerialPort_HYI.ReadBufferSize = 200000000;
+                }
+                catch { }
+            }
+            else
+            {
+                MessageBox.Show("Port Secmediniz");
+                lblHakemDurum.ForeColor = Color.Red;
+                lblHakemDurum.Text = "Baglanti Kurulamadi";
+            }
+
+            try
+            {
+                SerialPort_HYI.Open();
+                btnHakemIletisim.Enabled = false;
+                Thread.Sleep(1000);
+                if (SerialPort_HYI.IsOpen)
+                {
+                    lblHakemDurum.ForeColor = Color.Green;
+                    lblHakemDurum.Text = "Baglandi!";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error occured while opening port");
+                FetchAvailablePorts();
+                lblHakemDurum.ForeColor = Color.Red;
+                lblHakemDurum.Text = "Baglanti Kurulamadi";
+            }
+        }
+
+        private void SerialPort_HYI_dataSend() //.
+        {
+            try
+            {
+                if (HYIDataSendThread == null)
+                {
+                    HYIDataSendThread = new Thread(() =>
+                    {
+                        byte[] paketstr = new byte[78];
+                        while (SerialPort_HYI.IsOpen)
+                        {
+                            try
+                            {
+                                paketstr = PaketOlustur();
+                                SerialPort_HYI.Write(paketstr, 0, paketstr.Length);
+                                Thread.Sleep(250);
+
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.StackTrace);
+                            }
+                        }
+                    });
+                    HYIDataSendThread.Start();
+                    btnHakemIletisim.Text = "Hakem Yer Istasyonu Baglantısını Kes";
+                    Thread.Sleep(1000);
+                    btnHakemIletisim.Enabled = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HYI Paket Gonderilemedi. Bağlantı Sonlandırılıyor\n" + ex);
+                lblHakemDurum.Text = "Bağlantı Kesildi";
+                lblHakemDurum.ForeColor = Color.Red;
+                SerialPort_HYI.Close();
+                HYIDataSendThread?.Abort();
+                HYIDataSendThread = null;
+            }
+
+        }
+        private void ValueUpdate() //.
         {
             Thread.Sleep(100);
 
@@ -265,6 +381,9 @@ namespace RocketUI
                     break;
             }
 
+            if (SerialPort_HYI.IsOpen)
+                SerialPort_HYI_dataSend();
+
 
             /*
              HYI kısmı eklenecek 
@@ -279,6 +398,8 @@ namespace RocketUI
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString(), "Error While Refreshing GPS"); }
         }
 
+
+        #endregion
         /*
          * Event kısmı kaldı
          * map koyulacak
@@ -450,9 +571,10 @@ namespace RocketUI
         }
         #endregion
 
+        Thread FileSaveThread = null;
         #region EVENTS
-        // Form1 closing ekle
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) //.
         {
             try
             {
@@ -463,15 +585,17 @@ namespace RocketUI
                     serialPort_YerIst.WriteTimeout = 500; // 500 ms
                     serialPort_YerIst.Close();
                 }
-                /*if (SerialPort_HYI.IsOpen)
+                if (SerialPort_HYI.IsOpen)
                 {
                     MessageBox.Show("Hakem Istasyonu COM PORT baglantisini kapatmadiniz! Otomatik sonlandiriliyor...");
+                    SerialPort_HYI.ReadTimeout = 500; // 500 ms
+                    SerialPort_HYI.WriteTimeout = 500; // 500 ms
                     SerialPort_HYI.Close();
-                }*/
+                }
             }
             catch (Exception ex) { MessageBox.Show("" + ex); }
-           // FileSaveThread?.Abort();
-          //  HYIDataSendThread?.Abort();
+            FileSaveThread?.Abort();
+            HYIDataSendThread?.Abort();
         }
 
         private void Form1_Load(object sender, EventArgs e) //.
@@ -540,12 +664,41 @@ namespace RocketUI
 
         private void btnDosyayaKaydet_Click(object sender, EventArgs e)
         {
-
+            if (FileSaveThread == null)
+            {
+                lblDosyaKayit.Text = "Kayit Ediliyor!";
+                FileSaveThread = new Thread(() =>
+                {
+                    while (true)
+                    {
+                        if (!File.Exists(filenameRoket))
+                        {
+                            File.WriteAllText(filenameRoket, dataTitles + "\n" + recivedData + "\n");
+                        }
+                        else
+                        {
+                            File.AppendAllText(filenameRoket, recivedData + "\n");
+                        }
+                        Thread.Sleep(100);
+                    }
+                }
+                );
+                FileSaveThread.Start();
+                lblDosyaKayit.Text = "Kayit Ediliyor!";
+                btnDosyayaKaydet.Text = "Kaydi Bitir";
+            }
+            else
+            {
+                FileSaveThread.Abort();
+                FileSaveThread = null;
+                lblDosyaKayit.Text = "Kayit Edilmiyor!";
+                btnDosyayaKaydet.Text = "Dosyaya Kaydetmeye Basla";
+            }
         }
 
         #endregion
 
-        // HYI ile ilgili
+        // HYI
         #region 78 BIT DONUSTURUCU
 
         public byte CheckSumHesapla(byte[] o)

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.numericUpDownBaudRate = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxComPort = new System.Windows.Forms.ComboBox();
@@ -56,7 +56,6 @@
             this.lblDosyaKayit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDosyayaKaydet = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.lblDurum = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -103,7 +102,14 @@
             this.textBoxGPSIrtifa_AnaBil = new System.Windows.Forms.TextBox();
             this.textBoxGPSEnlem_AnaBil = new System.Windows.Forms.TextBox();
             this.textBoxGPSBoylam_AnaBil = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBoxAci_AnaBil = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxGPSSatNum_AnaBil = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -121,28 +127,16 @@
             this.textBoxIvmeY_AnaBil = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxIvmeZ_AnaBil = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBoxAci_AnaBil = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBoxGPSSatNum_AnaBil = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.checkBoxGPS = new System.Windows.Forms.CheckBox();
             this.checkBoxbBNO = new System.Windows.Forms.CheckBox();
             this.checkBoxBME = new System.Windows.Forms.CheckBox();
             this.checkBoxSD = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.gMapMain = new GMap.NET.WindowsForms.GMapControl();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.patlama2_yes = new System.Windows.Forms.PictureBox();
-            this.patlama1_yes = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.patlama2_no = new System.Windows.Forms.PictureBox();
-            this.patlama1_no = new System.Windows.Forms.PictureBox();
             this.chartAltitudeMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAltitudePayload = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartPressureMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -151,6 +145,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.patlama2_yes = new System.Windows.Forms.PictureBox();
+            this.patlama1_yes = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.patlama2_no = new System.Windows.Forms.PictureBox();
+            this.patlama1_no = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBaudRate)).BeginInit();
             this.panelBaglanti.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,22 +164,26 @@
             this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel11.SuspendLayout();
             this.flowLayoutPanel12.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel13.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownBaudRate
@@ -185,7 +191,7 @@
             this.numericUpDownBaudRate.BackColor = System.Drawing.SystemColors.Control;
             this.numericUpDownBaudRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDownBaudRate.Font = new System.Drawing.Font("Agency FB", 14.25F);
-            this.numericUpDownBaudRate.Location = new System.Drawing.Point(760, 7);
+            this.numericUpDownBaudRate.Location = new System.Drawing.Point(543, 25);
             this.numericUpDownBaudRate.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownBaudRate.Maximum = new decimal(new int[] {
             500000000,
@@ -207,7 +213,7 @@
             this.label2.Font = new System.Drawing.Font("Agency FB", 17F);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(613, 16);
+            this.label2.Location = new System.Drawing.Point(396, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 34);
@@ -219,7 +225,7 @@
             this.comboBoxComPort.BackColor = System.Drawing.SystemColors.Control;
             this.comboBoxComPort.Font = new System.Drawing.Font("Agency FB", 14.25F);
             this.comboBoxComPort.FormattingEnabled = true;
-            this.comboBoxComPort.Location = new System.Drawing.Point(203, 25);
+            this.comboBoxComPort.Location = new System.Drawing.Point(184, 25);
             this.comboBoxComPort.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxComPort.Name = "comboBoxComPort";
             this.comboBoxComPort.Size = new System.Drawing.Size(197, 36);
@@ -233,7 +239,7 @@
             this.btnBaglantiyiBitir.Font = new System.Drawing.Font("Agency FB", 18F);
             this.btnBaglantiyiBitir.ForeColor = System.Drawing.Color.White;
             this.btnBaglantiyiBitir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnBaglantiyiBitir.Location = new System.Drawing.Point(1073, 4);
+            this.btnBaglantiyiBitir.Location = new System.Drawing.Point(808, 11);
             this.btnBaglantiyiBitir.Margin = new System.Windows.Forms.Padding(4);
             this.btnBaglantiyiBitir.Name = "btnBaglantiyiBitir";
             this.btnBaglantiyiBitir.Size = new System.Drawing.Size(172, 46);
@@ -249,7 +255,7 @@
             this.btnBaglan.Font = new System.Drawing.Font("Agency FB", 18F);
             this.btnBaglan.ForeColor = System.Drawing.Color.White;
             this.btnBaglan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnBaglan.Location = new System.Drawing.Point(897, 4);
+            this.btnBaglan.Location = new System.Drawing.Point(684, 13);
             this.btnBaglan.Margin = new System.Windows.Forms.Padding(4);
             this.btnBaglan.Name = "btnBaglan";
             this.btnBaglan.Size = new System.Drawing.Size(105, 44);
@@ -285,7 +291,7 @@
             this.panelBaglanti.Location = new System.Drawing.Point(0, 0);
             this.panelBaglanti.Margin = new System.Windows.Forms.Padding(4);
             this.panelBaglanti.Name = "panelBaglanti";
-            this.panelBaglanti.Size = new System.Drawing.Size(2415, 73);
+            this.panelBaglanti.Size = new System.Drawing.Size(1924, 73);
             this.panelBaglanti.TabIndex = 13;
             // 
             // button2
@@ -296,10 +302,10 @@
             this.button2.Font = new System.Drawing.Font("Agency FB", 18F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(1774, 11);
+            this.button2.Location = new System.Drawing.Point(1453, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(637, 47);
+            this.button2.Size = new System.Drawing.Size(366, 47);
             this.button2.TabIndex = 13;
             this.button2.Text = "Hakem Yer Istasyonuna Baglan";
             this.button2.UseVisualStyleBackColor = false;
@@ -313,7 +319,7 @@
             this.button1.Font = new System.Drawing.Font("Agency FB", 18F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(1316, 7);
+            this.button1.Location = new System.Drawing.Point(999, 8);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(416, 54);
@@ -328,7 +334,7 @@
             this.lblHakemDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblHakemDurum.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblHakemDurum.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblHakemDurum.Location = new System.Drawing.Point(6136, 0);
+            this.lblHakemDurum.Location = new System.Drawing.Point(5645, 0);
             this.lblHakemDurum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHakemDurum.Name = "lblHakemDurum";
             this.lblHakemDurum.Size = new System.Drawing.Size(146, 24);
@@ -343,7 +349,7 @@
             this.btnHakemIletisim.Font = new System.Drawing.Font("Agency FB", 18F);
             this.btnHakemIletisim.ForeColor = System.Drawing.Color.White;
             this.btnHakemIletisim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHakemIletisim.Location = new System.Drawing.Point(6311, 14);
+            this.btnHakemIletisim.Location = new System.Drawing.Point(5820, 14);
             this.btnHakemIletisim.Margin = new System.Windows.Forms.Padding(4);
             this.btnHakemIletisim.Name = "btnHakemIletisim";
             this.btnHakemIletisim.Size = new System.Drawing.Size(301, 47);
@@ -358,7 +364,7 @@
             this.lblDosyaKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblDosyaKayit.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblDosyaKayit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDosyaKayit.Location = new System.Drawing.Point(5999, 0);
+            this.lblDosyaKayit.Location = new System.Drawing.Point(5508, 0);
             this.lblDosyaKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDosyaKayit.Name = "lblDosyaKayit";
             this.lblDosyaKayit.Size = new System.Drawing.Size(140, 24);
@@ -385,29 +391,13 @@
             this.btnDosyayaKaydet.Font = new System.Drawing.Font("Agency FB", 18F);
             this.btnDosyayaKaydet.ForeColor = System.Drawing.Color.White;
             this.btnDosyayaKaydet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDosyayaKaydet.Location = new System.Drawing.Point(3195, 4);
+            this.btnDosyayaKaydet.Location = new System.Drawing.Point(2704, 4);
             this.btnDosyayaKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnDosyayaKaydet.Name = "btnDosyayaKaydet";
             this.btnDosyayaKaydet.Size = new System.Drawing.Size(312, 44);
             this.btnDosyayaKaydet.TabIndex = 8;
             this.btnDosyayaKaydet.Text = "Dosyaya Kaydetmeye Basla";
             this.btnDosyayaKaydet.UseVisualStyleBackColor = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
-            this.btnRefresh.TabIndex = 7;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblDurum
             // 
@@ -429,7 +419,7 @@
             this.label33.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold);
             this.label33.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label33.Location = new System.Drawing.Point(255, 37);
+            this.label33.Location = new System.Drawing.Point(255, 21);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(181, 57);
@@ -444,7 +434,7 @@
             this.label34.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold);
             this.label34.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label34.Location = new System.Drawing.Point(255, 229);
+            this.label34.Location = new System.Drawing.Point(255, 213);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(193, 57);
@@ -464,19 +454,19 @@
             this.panel2.Controls.Add(this.flowLayoutPanel3);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1846, 73);
+            this.panel2.Location = new System.Drawing.Point(1362, 73);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(569, 1294);
+            this.panel2.Size = new System.Drawing.Size(562, 982);
             this.panel2.TabIndex = 16;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.gMapPayload);
-            this.panel7.Location = new System.Drawing.Point(16, 745);
+            this.panel7.Location = new System.Drawing.Point(12, 555);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(536, 532);
+            this.panel7.Size = new System.Drawing.Size(536, 362);
             this.panel7.TabIndex = 36;
             // 
             // gMapPayload
@@ -558,7 +548,7 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(47, 80);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(494, 583);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(498, 476);
             this.flowLayoutPanel3.TabIndex = 25;
             // 
             // flowLayoutPanel4
@@ -569,10 +559,10 @@
             this.flowLayoutPanel4.Controls.Add(this.label15);
             this.flowLayoutPanel4.Controls.Add(this.label23);
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(5, 5);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(5, 6);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(223, 283);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(223, 224);
             this.flowLayoutPanel4.TabIndex = 9;
             // 
             // label5
@@ -642,7 +632,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(238, 5);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(228, 283);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(228, 226);
             this.flowLayoutPanel2.TabIndex = 27;
             // 
             // textBoxPaketNum_GorevYuku
@@ -696,10 +686,10 @@
             this.flowLayoutPanel7.Controls.Add(this.textBoxGPSBoylam_GorevYuku);
             this.flowLayoutPanel7.Controls.Add(this.label32);
             this.flowLayoutPanel7.Controls.Add(this.textBoxGPSSatNum_GorevYuku);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(5, 298);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(5, 241);
             this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(461, 274);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(461, 224);
             this.flowLayoutPanel7.TabIndex = 26;
             // 
             // label30
@@ -708,10 +698,10 @@
             this.label30.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label30.ForeColor = System.Drawing.SystemColors.Control;
             this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label30.Location = new System.Drawing.Point(5, 5);
+            this.label30.Location = new System.Drawing.Point(5, 7);
             this.label30.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(217, 66);
+            this.label30.Size = new System.Drawing.Size(217, 45);
             this.label30.TabIndex = 24;
             this.label30.Text = "GPS İrtifa";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -732,10 +722,10 @@
             this.label16.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label16.ForeColor = System.Drawing.SystemColors.Control;
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(5, 71);
+            this.label16.Location = new System.Drawing.Point(5, 62);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(217, 66);
+            this.label16.Size = new System.Drawing.Size(217, 40);
             this.label16.TabIndex = 20;
             this.label16.Text = "GPS Enlem";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -743,7 +733,7 @@
             // textBoxGPSEnlem_GorevYuku
             // 
             this.textBoxGPSEnlem_GorevYuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBoxGPSEnlem_GorevYuku.Location = new System.Drawing.Point(232, 76);
+            this.textBoxGPSEnlem_GorevYuku.Location = new System.Drawing.Point(232, 60);
             this.textBoxGPSEnlem_GorevYuku.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxGPSEnlem_GorevYuku.Name = "textBoxGPSEnlem_GorevYuku";
             this.textBoxGPSEnlem_GorevYuku.Size = new System.Drawing.Size(209, 45);
@@ -756,10 +746,10 @@
             this.label17.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(5, 137);
+            this.label17.Location = new System.Drawing.Point(5, 114);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(217, 66);
+            this.label17.Size = new System.Drawing.Size(217, 46);
             this.label17.TabIndex = 22;
             this.label17.Text = "GPS Boylam";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -767,7 +757,7 @@
             // textBoxGPSBoylam_GorevYuku
             // 
             this.textBoxGPSBoylam_GorevYuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBoxGPSBoylam_GorevYuku.Location = new System.Drawing.Point(232, 142);
+            this.textBoxGPSBoylam_GorevYuku.Location = new System.Drawing.Point(232, 115);
             this.textBoxGPSBoylam_GorevYuku.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxGPSBoylam_GorevYuku.Name = "textBoxGPSBoylam_GorevYuku";
             this.textBoxGPSBoylam_GorevYuku.Size = new System.Drawing.Size(209, 45);
@@ -780,10 +770,10 @@
             this.label32.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label32.ForeColor = System.Drawing.SystemColors.Control;
             this.label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label32.Location = new System.Drawing.Point(5, 203);
+            this.label32.Location = new System.Drawing.Point(5, 169);
             this.label32.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(217, 66);
+            this.label32.Size = new System.Drawing.Size(217, 47);
             this.label32.TabIndex = 26;
             this.label32.Text = "GPS Uydu Sayısı";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -791,7 +781,7 @@
             // textBoxGPSSatNum_GorevYuku
             // 
             this.textBoxGPSSatNum_GorevYuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBoxGPSSatNum_GorevYuku.Location = new System.Drawing.Point(232, 208);
+            this.textBoxGPSSatNum_GorevYuku.Location = new System.Drawing.Point(232, 170);
             this.textBoxGPSSatNum_GorevYuku.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxGPSSatNum_GorevYuku.Name = "textBoxGPSSatNum_GorevYuku";
             this.textBoxGPSSatNum_GorevYuku.Size = new System.Drawing.Size(209, 45);
@@ -808,7 +798,7 @@
             this.label22.Location = new System.Drawing.Point(0, 0);
             this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(567, 66);
+            this.label22.Size = new System.Drawing.Size(560, 66);
             this.label22.TabIndex = 16;
             this.label22.Text = "Görev Yükü";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -835,14 +825,16 @@
             this.flowLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel8.Controls.Add(this.flowLayoutPanel11);
             this.flowLayoutPanel8.Controls.Add(this.flowLayoutPanel12);
+            this.flowLayoutPanel8.Controls.Add(this.panel8);
             this.flowLayoutPanel8.Controls.Add(this.label8);
+            this.flowLayoutPanel8.Controls.Add(this.label3);
             this.flowLayoutPanel8.Controls.Add(this.flowLayoutPanel13);
             this.flowLayoutPanel8.Controls.Add(this.label9);
             this.flowLayoutPanel8.Controls.Add(this.flowLayoutPanel1);
             this.flowLayoutPanel8.Location = new System.Drawing.Point(9, 91);
             this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(519, 516);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(519, 505);
             this.flowLayoutPanel8.TabIndex = 26;
             // 
             // flowLayoutPanel11
@@ -859,7 +851,7 @@
             this.flowLayoutPanel11.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(219, 282);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(208, 282);
             this.flowLayoutPanel11.TabIndex = 9;
             // 
             // label7
@@ -871,7 +863,7 @@
             this.label7.Location = new System.Drawing.Point(4, 4);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(272, 39);
+            this.label7.Size = new System.Drawing.Size(192, 39);
             this.label7.TabIndex = 18;
             this.label7.Text = "Paket Numarası";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -882,10 +874,10 @@
             this.label20.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(5, 43);
+            this.label20.Location = new System.Drawing.Point(8, 43);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(269, 44);
+            this.label20.Size = new System.Drawing.Size(183, 44);
             this.label20.TabIndex = 19;
             this.label20.Text = "Basınç (HPA)";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -896,10 +888,10 @@
             this.label27.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label27.ForeColor = System.Drawing.SystemColors.Control;
             this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(6, 87);
+            this.label27.Location = new System.Drawing.Point(8, 87);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(268, 44);
+            this.label27.Size = new System.Drawing.Size(183, 44);
             this.label27.TabIndex = 25;
             this.label27.Text = "Basınç İrtifa";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -910,10 +902,10 @@
             this.label28.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label28.ForeColor = System.Drawing.SystemColors.Control;
             this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label28.Location = new System.Drawing.Point(7, 131);
+            this.label28.Location = new System.Drawing.Point(6, 131);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(265, 44);
+            this.label28.Size = new System.Drawing.Size(187, 44);
             this.label28.TabIndex = 26;
             this.label28.Text = "GPS İrtifa";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -924,10 +916,10 @@
             this.label21.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(6, 175);
+            this.label21.Location = new System.Drawing.Point(8, 175);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(267, 39);
+            this.label21.Size = new System.Drawing.Size(184, 39);
             this.label21.TabIndex = 20;
             this.label21.Text = "GPS Enlem";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -938,10 +930,10 @@
             this.label24.Font = new System.Drawing.Font("Agency FB", 21.75F);
             this.label24.ForeColor = System.Drawing.SystemColors.Control;
             this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label24.Location = new System.Drawing.Point(7, 214);
+            this.label24.Location = new System.Drawing.Point(8, 214);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(265, 58);
+            this.label24.Size = new System.Drawing.Size(183, 58);
             this.label24.TabIndex = 22;
             this.label24.Text = "GPS Boylam";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -956,10 +948,10 @@
             this.flowLayoutPanel12.Controls.Add(this.textBoxGPSEnlem_AnaBil);
             this.flowLayoutPanel12.Controls.Add(this.textBoxGPSBoylam_AnaBil);
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(231, 4);
+            this.flowLayoutPanel12.Location = new System.Drawing.Point(220, 4);
             this.flowLayoutPanel12.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(193, 282);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(176, 282);
             this.flowLayoutPanel12.TabIndex = 8;
             // 
             // textBoxPaketNum_AnaBil
@@ -1024,6 +1016,76 @@
             this.textBoxGPSBoylam_AnaBil.TabIndex = 17;
             this.textBoxGPSBoylam_AnaBil.Text = "0";
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.textBoxAci_AnaBil);
+            this.panel8.Controls.Add(this.label29);
+            this.panel8.Controls.Add(this.label37);
+            this.panel8.Controls.Add(this.flowLayoutPanel9);
+            this.panel8.Location = new System.Drawing.Point(403, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(100, 283);
+            this.panel8.TabIndex = 20;
+            // 
+            // textBoxAci_AnaBil
+            // 
+            this.textBoxAci_AnaBil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAci_AnaBil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBoxAci_AnaBil.Location = new System.Drawing.Point(12, 227);
+            this.textBoxAci_AnaBil.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAci_AnaBil.Name = "textBoxAci_AnaBil";
+            this.textBoxAci_AnaBil.Size = new System.Drawing.Size(76, 36);
+            this.textBoxAci_AnaBil.TabIndex = 23;
+            this.textBoxAci_AnaBil.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label29.AutoSize = true;
+            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label29.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Linen;
+            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label29.Location = new System.Drawing.Point(7, 137);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(83, 84);
+            this.label29.TabIndex = 20;
+            this.label29.Text = "Dünya\r\nNormaliyle\r\nAçısı : ";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label37.Location = new System.Drawing.Point(3, 1);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(95, 56);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "GPS \r\nUydu Sayısı:";
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.textBoxGPSSatNum_AnaBil);
+            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 70);
+            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(86, 48);
+            this.flowLayoutPanel9.TabIndex = 32;
+            // 
+            // textBoxGPSSatNum_AnaBil
+            // 
+            this.textBoxGPSSatNum_AnaBil.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxGPSSatNum_AnaBil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBoxGPSSatNum_AnaBil.Location = new System.Drawing.Point(0, 4);
+            this.textBoxGPSSatNum_AnaBil.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxGPSSatNum_AnaBil.Name = "textBoxGPSSatNum_AnaBil";
+            this.textBoxGPSSatNum_AnaBil.Size = new System.Drawing.Size(82, 36);
+            this.textBoxGPSSatNum_AnaBil.TabIndex = 23;
+            this.textBoxGPSSatNum_AnaBil.Text = "-1";
+            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1040,6 +1102,16 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Jiroskop (dps)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label3.Location = new System.Drawing.Point(191, 290);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Timer";
             // 
             // flowLayoutPanel13
             // 
@@ -1268,80 +1340,6 @@
             this.textBoxIvmeZ_AnaBil.TabIndex = 28;
             this.textBoxIvmeZ_AnaBil.Text = "0";
             // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.Controls.Add(this.label29);
-            this.flowLayoutPanel6.Controls.Add(this.textBoxAci_AnaBil);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(9, 615);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(235, 126);
-            this.flowLayoutPanel6.TabIndex = 29;
-            // 
-            // label29
-            // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label29.AutoSize = true;
-            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label29.Font = new System.Drawing.Font("Agency FB", 18F);
-            this.label29.ForeColor = System.Drawing.Color.Linen;
-            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label29.Location = new System.Drawing.Point(4, 4);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(226, 36);
-            this.label29.TabIndex = 20;
-            this.label29.Text = "Dünya Normaliyle Açısı : ";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxAci_AnaBil
-            // 
-            this.textBoxAci_AnaBil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxAci_AnaBil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBoxAci_AnaBil.Location = new System.Drawing.Point(4, 44);
-            this.textBoxAci_AnaBil.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxAci_AnaBil.Name = "textBoxAci_AnaBil";
-            this.textBoxAci_AnaBil.Size = new System.Drawing.Size(181, 36);
-            this.textBoxAci_AnaBil.TabIndex = 23;
-            this.textBoxAci_AnaBil.Text = "0";
-            // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.Controls.Add(this.textBoxGPSSatNum_AnaBil);
-            this.flowLayoutPanel9.Controls.Add(this.label31);
-            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(267, 620);
-            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(263, 68);
-            this.flowLayoutPanel9.TabIndex = 32;
-            // 
-            // textBoxGPSSatNum_AnaBil
-            // 
-            this.textBoxGPSSatNum_AnaBil.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxGPSSatNum_AnaBil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBoxGPSSatNum_AnaBil.Location = new System.Drawing.Point(196, 4);
-            this.textBoxGPSSatNum_AnaBil.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxGPSSatNum_AnaBil.Name = "textBoxGPSSatNum_AnaBil";
-            this.textBoxGPSSatNum_AnaBil.Size = new System.Drawing.Size(63, 36);
-            this.textBoxGPSSatNum_AnaBil.TabIndex = 23;
-            this.textBoxGPSSatNum_AnaBil.Text = "-1";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Font = new System.Drawing.Font("Agency FB", 18F);
-            this.label31.ForeColor = System.Drawing.SystemColors.Control;
-            this.label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label31.Location = new System.Drawing.Point(34, 4);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(154, 40);
-            this.label31.TabIndex = 24;
-            this.label31.Text = "GPS Uydu Sayısı";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // checkBoxGPS
             // 
             this.checkBoxGPS.AutoSize = true;
@@ -1394,16 +1392,6 @@
             this.checkBoxSD.Text = "SD Kart";
             this.checkBoxSD.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(287, 706);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Timer";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(102)))));
@@ -1411,27 +1399,24 @@
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.checkBoxSD);
             this.panel1.Controls.Add(this.checkBoxBME);
-            this.panel1.Controls.Add(this.flowLayoutPanel6);
-            this.panel1.Controls.Add(this.flowLayoutPanel9);
             this.panel1.Controls.Add(this.checkBoxbBNO);
             this.panel1.Controls.Add(this.checkBoxGPS);
             this.panel1.Controls.Add(this.flowLayoutPanel8);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 73);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(535, 1294);
+            this.panel1.Size = new System.Drawing.Size(535, 982);
             this.panel1.TabIndex = 15;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.gMapMain);
-            this.panel6.Location = new System.Drawing.Point(12, 762);
+            this.panel6.Location = new System.Drawing.Point(12, 600);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(499, 514);
+            this.panel6.Size = new System.Drawing.Size(499, 358);
             this.panel6.TabIndex = 33;
             // 
             // gMapMain
@@ -1458,7 +1443,7 @@
             this.gMapMain.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapMain.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapMain.ShowTileGridLines = false;
-            this.gMapMain.Size = new System.Drawing.Size(491, 507);
+            this.gMapMain.Size = new System.Drawing.Size(491, 346);
             this.gMapMain.TabIndex = 33;
             this.gMapMain.Zoom = 0D;
             // 
@@ -1474,20 +1459,173 @@
             this.panel3.Controls.Add(this.patlama2_no);
             this.panel3.Controls.Add(this.patlama1_no);
             this.panel3.Controls.Add(this.label33);
-            this.panel3.Location = new System.Drawing.Point(543, 922);
+            this.panel3.Location = new System.Drawing.Point(543, 612);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1293, 454);
+            this.panel3.Size = new System.Drawing.Size(929, 390);
             this.panel3.TabIndex = 1000;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Location = new System.Drawing.Point(32, 213);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(212, 147);
+            this.panel5.TabIndex = 25;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Location = new System.Drawing.Point(32, 21);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(213, 159);
+            this.panel4.TabIndex = 24;
+            // 
+            // chartAltitudeMain
+            // 
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.AxisX.MajorTickMark.Enabled = false;
+            chartArea5.AxisY.MajorGrid.Enabled = false;
+            chartArea5.Name = "ChartArea1";
+            this.chartAltitudeMain.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartAltitudeMain.Legends.Add(legend5);
+            this.chartAltitudeMain.Location = new System.Drawing.Point(552, 127);
+            this.chartAltitudeMain.Margin = new System.Windows.Forms.Padding(4);
+            this.chartAltitudeMain.Name = "chartAltitudeMain";
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.MarkerBorderColor = System.Drawing.Color.Transparent;
+            series5.MarkerStep = 2;
+            series5.Name = "Series1";
+            this.chartAltitudeMain.Series.Add(series5);
+            this.chartAltitudeMain.Size = new System.Drawing.Size(393, 199);
+            this.chartAltitudeMain.TabIndex = 25;
+            this.chartAltitudeMain.Text = "chart1";
+            // 
+            // chartAltitudePayload
+            // 
+            chartArea6.AxisX.MajorGrid.Enabled = false;
+            chartArea6.AxisX.MajorTickMark.Enabled = false;
+            chartArea6.AxisY.MajorGrid.Enabled = false;
+            chartArea6.AxisY.MajorTickMark.Enabled = false;
+            chartArea6.Name = "ChartArea1";
+            this.chartAltitudePayload.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartAltitudePayload.Legends.Add(legend6);
+            this.chartAltitudePayload.Location = new System.Drawing.Point(953, 127);
+            this.chartAltitudePayload.Margin = new System.Windows.Forms.Padding(4);
+            this.chartAltitudePayload.Name = "chartAltitudePayload";
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartAltitudePayload.Series.Add(series6);
+            this.chartAltitudePayload.Size = new System.Drawing.Size(393, 193);
+            this.chartAltitudePayload.TabIndex = 26;
+            this.chartAltitudePayload.Text = "chart2";
+            // 
+            // chartPressureMain
+            // 
+            chartArea7.AxisX.MajorGrid.Enabled = false;
+            chartArea7.AxisX.MajorTickMark.Enabled = false;
+            chartArea7.AxisY.MajorGrid.Enabled = false;
+            chartArea7.AxisY.MajorTickMark.Enabled = false;
+            chartArea7.Name = "ChartArea1";
+            this.chartPressureMain.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartPressureMain.Legends.Add(legend7);
+            this.chartPressureMain.Location = new System.Drawing.Point(552, 385);
+            this.chartPressureMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartPressureMain.Name = "chartPressureMain";
+            series7.BorderWidth = 3;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chartPressureMain.Series.Add(series7);
+            this.chartPressureMain.Size = new System.Drawing.Size(402, 223);
+            this.chartPressureMain.TabIndex = 1001;
+            this.chartPressureMain.Text = "chart3";
+            // 
+            // chartPressurePayload
+            // 
+            chartArea8.AxisX.MajorGrid.Enabled = false;
+            chartArea8.AxisX.MajorTickMark.Enabled = false;
+            chartArea8.AxisY.MajorGrid.Enabled = false;
+            chartArea8.AxisY.MajorTickMark.Enabled = false;
+            chartArea8.Name = "ChartArea1";
+            this.chartPressurePayload.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartPressurePayload.Legends.Add(legend8);
+            this.chartPressurePayload.Location = new System.Drawing.Point(953, 385);
+            this.chartPressurePayload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartPressurePayload.Name = "chartPressurePayload";
+            series8.BorderWidth = 3;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartPressurePayload.Series.Add(series8);
+            this.chartPressurePayload.Size = new System.Drawing.Size(393, 223);
+            this.chartPressurePayload.TabIndex = 1002;
+            this.chartPressurePayload.Text = "chart4";
+            // 
+            // chartAltitudeMainTitle
+            // 
+            this.chartAltitudeMainTitle.AutoSize = true;
+            this.chartAltitudeMainTitle.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chartAltitudeMainTitle.Location = new System.Drawing.Point(568, 80);
+            this.chartAltitudeMainTitle.Name = "chartAltitudeMainTitle";
+            this.chartAltitudeMainTitle.Size = new System.Drawing.Size(323, 43);
+            this.chartAltitudeMainTitle.TabIndex = 1003;
+            this.chartAltitudeMainTitle.Text = "İrtifa Ana Bilgisayar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(1032, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(197, 43);
+            this.label4.TabIndex = 1004;
+            this.label4.Text = "İrtifa Görev";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label35.Location = new System.Drawing.Point(572, 340);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(350, 43);
+            this.label35.TabIndex = 1005;
+            this.label35.Text = "Basınç Ana Bilgisayar";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label36.Location = new System.Drawing.Point(1032, 340);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(224, 43);
+            this.label36.TabIndex = 1006;
+            this.label36.Text = "Basınç Görev";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(936, 74);
+            this.pictureBox5.Location = new System.Drawing.Point(497, 39);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(302, 235);
+            this.pictureBox5.Size = new System.Drawing.Size(347, 263);
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
@@ -1496,7 +1634,7 @@
             this.patlama2_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_yes.BackgroundImage")));
             this.patlama2_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.patlama2_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_yes.Location = new System.Drawing.Point(309, 314);
+            this.patlama2_yes.Location = new System.Drawing.Point(309, 298);
             this.patlama2_yes.Margin = new System.Windows.Forms.Padding(4);
             this.patlama2_yes.Name = "patlama2_yes";
             this.patlama2_yes.Size = new System.Drawing.Size(67, 62);
@@ -1508,37 +1646,27 @@
             this.patlama1_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_yes.BackgroundImage")));
             this.patlama1_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.patlama1_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_yes.Location = new System.Drawing.Point(312, 112);
+            this.patlama1_yes.Location = new System.Drawing.Point(312, 96);
             this.patlama1_yes.Margin = new System.Windows.Forms.Padding(4);
             this.patlama1_yes.Name = "patlama1_yes";
             this.patlama1_yes.Size = new System.Drawing.Size(67, 62);
             this.patlama1_yes.TabIndex = 27;
             this.patlama1_yes.TabStop = false;
             // 
-            // panel5
+            // pictureBox1
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(33, 229);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(212, 190);
-            this.panel5.TabIndex = 25;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(33, 23);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(213, 190);
-            this.panel4.TabIndex = 24;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 156);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // patlama2_no
             // 
             this.patlama2_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_no.BackgroundImage")));
             this.patlama2_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.patlama2_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_no.Location = new System.Drawing.Point(309, 314);
+            this.patlama2_no.Location = new System.Drawing.Point(309, 298);
             this.patlama2_no.Margin = new System.Windows.Forms.Padding(4);
             this.patlama2_no.Name = "patlama2_no";
             this.patlama2_no.Size = new System.Drawing.Size(67, 62);
@@ -1550,152 +1678,44 @@
             this.patlama1_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_no.BackgroundImage")));
             this.patlama1_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.patlama1_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_no.Location = new System.Drawing.Point(312, 112);
+            this.patlama1_no.Location = new System.Drawing.Point(312, 96);
             this.patlama1_no.Margin = new System.Windows.Forms.Padding(4);
             this.patlama1_no.Name = "patlama1_no";
             this.patlama1_no.Size = new System.Drawing.Size(67, 62);
             this.patlama1_no.TabIndex = 22;
             this.patlama1_no.TabStop = false;
             // 
-            // chartAltitudeMain
+            // btnRefresh
             // 
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.MajorTickMark.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.Name = "ChartArea1";
-            this.chartAltitudeMain.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartAltitudeMain.Legends.Add(legend1);
-            this.chartAltitudeMain.Location = new System.Drawing.Point(552, 185);
-            this.chartAltitudeMain.Margin = new System.Windows.Forms.Padding(4);
-            this.chartAltitudeMain.Name = "chartAltitudeMain";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series1.MarkerStep = 2;
-            series1.Name = "Series1";
-            this.chartAltitudeMain.Series.Add(series1);
-            this.chartAltitudeMain.Size = new System.Drawing.Size(651, 240);
-            this.chartAltitudeMain.TabIndex = 25;
-            this.chartAltitudeMain.Text = "chart1";
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // chartAltitudePayload
+            // pictureBox2
             // 
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.MajorTickMark.Enabled = false;
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.MajorTickMark.Enabled = false;
-            chartArea2.Name = "ChartArea1";
-            this.chartAltitudePayload.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartAltitudePayload.Legends.Add(legend2);
-            this.chartAltitudePayload.Location = new System.Drawing.Point(1189, 174);
-            this.chartAltitudePayload.Margin = new System.Windows.Forms.Padding(4);
-            this.chartAltitudePayload.Name = "chartAltitudePayload";
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartAltitudePayload.Series.Add(series2);
-            this.chartAltitudePayload.Size = new System.Drawing.Size(647, 240);
-            this.chartAltitudePayload.TabIndex = 26;
-            this.chartAltitudePayload.Text = "chart2";
-            // 
-            // chartPressureMain
-            // 
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.MajorTickMark.Enabled = false;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorTickMark.Enabled = false;
-            chartArea3.Name = "ChartArea1";
-            this.chartPressureMain.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartPressureMain.Legends.Add(legend3);
-            this.chartPressureMain.Location = new System.Drawing.Point(552, 529);
-            this.chartPressureMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartPressureMain.Name = "chartPressureMain";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartPressureMain.Series.Add(series3);
-            this.chartPressureMain.Size = new System.Drawing.Size(651, 286);
-            this.chartPressureMain.TabIndex = 1001;
-            this.chartPressureMain.Text = "chart3";
-            // 
-            // chartPressurePayload
-            // 
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorTickMark.Enabled = false;
-            chartArea4.AxisY.MajorGrid.Enabled = false;
-            chartArea4.AxisY.MajorTickMark.Enabled = false;
-            chartArea4.Name = "ChartArea1";
-            this.chartPressurePayload.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartPressurePayload.Legends.Add(legend4);
-            this.chartPressurePayload.Location = new System.Drawing.Point(1192, 519);
-            this.chartPressurePayload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartPressurePayload.Name = "chartPressurePayload";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartPressurePayload.Series.Add(series4);
-            this.chartPressurePayload.Size = new System.Drawing.Size(645, 294);
-            this.chartPressurePayload.TabIndex = 1002;
-            this.chartPressurePayload.Text = "chart4";
-            // 
-            // chartAltitudeMainTitle
-            // 
-            this.chartAltitudeMainTitle.AutoSize = true;
-            this.chartAltitudeMainTitle.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chartAltitudeMainTitle.Location = new System.Drawing.Point(665, 100);
-            this.chartAltitudeMainTitle.Name = "chartAltitudeMainTitle";
-            this.chartAltitudeMainTitle.Size = new System.Drawing.Size(323, 43);
-            this.chartAltitudeMainTitle.TabIndex = 1003;
-            this.chartAltitudeMainTitle.Text = "İrtifa Ana Bilgisayar";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(1393, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(197, 43);
-            this.label4.TabIndex = 1004;
-            this.label4.Text = "İrtifa Görev";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label35.Location = new System.Drawing.Point(665, 470);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(350, 43);
-            this.label35.TabIndex = 1005;
-            this.label35.Text = "Basınç Ana Bilgisayar";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label36.Location = new System.Drawing.Point(1393, 474);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(224, 43);
-            this.label36.TabIndex = 1006;
-            this.label36.Text = "Basınç Görev";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(5, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(206, 142);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(2415, 1367);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label4);
@@ -1731,28 +1751,32 @@
             this.flowLayoutPanel11.ResumeLayout(false);
             this.flowLayoutPanel12.ResumeLayout(false);
             this.flowLayoutPanel12.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
             this.flowLayoutPanel13.ResumeLayout(false);
             this.flowLayoutPanel13.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
-            this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1818,13 +1842,11 @@
         private System.Windows.Forms.TextBox textBoxGPSIrtifa_AnaBil;
         private System.Windows.Forms.TextBox textBoxGPSEnlem_AnaBil;
         private System.Windows.Forms.TextBox textBoxGPSBoylam_AnaBil;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBoxAci_AnaBil;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.TextBox textBoxGPSSatNum_AnaBil;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1868,6 +1890,10 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
