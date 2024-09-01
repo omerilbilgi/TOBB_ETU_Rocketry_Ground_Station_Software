@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.numericUpDownBaudRate = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxComPort = new System.Windows.Forms.ComboBox();
@@ -56,6 +56,7 @@
             this.lblDosyaKayit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDosyayaKaydet = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.lblDurum = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -135,8 +136,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.gMapMain = new GMap.NET.WindowsForms.GMapControl();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.patlama2_yes = new System.Windows.Forms.PictureBox();
+            this.patlama1_yes = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.patlama2_no = new System.Windows.Forms.PictureBox();
+            this.patlama1_no = new System.Windows.Forms.PictureBox();
             this.chartAltitudeMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAltitudePayload = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartPressureMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -145,14 +151,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.patlama2_yes = new System.Windows.Forms.PictureBox();
-            this.patlama1_yes = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.patlama2_no = new System.Windows.Forms.PictureBox();
-            this.patlama1_no = new System.Windows.Forms.PictureBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBaudRate)).BeginInit();
             this.panelBaglanti.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -171,19 +170,18 @@
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownBaudRate
@@ -398,6 +396,22 @@
             this.btnDosyayaKaydet.TabIndex = 8;
             this.btnDosyayaKaydet.Text = "Dosyaya Kaydetmeye Basla";
             this.btnDosyayaKaydet.UseVisualStyleBackColor = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblDurum
             // 
@@ -1416,7 +1430,7 @@
             this.panel6.Location = new System.Drawing.Point(12, 600);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(499, 358);
+            this.panel6.Size = new System.Drawing.Size(499, 317);
             this.panel6.TabIndex = 33;
             // 
             // gMapMain
@@ -1428,7 +1442,7 @@
             this.gMapMain.GrayScaleMode = false;
             this.gMapMain.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapMain.LevelsKeepInMemmory = 5;
-            this.gMapMain.Location = new System.Drawing.Point(4, 4);
+            this.gMapMain.Location = new System.Drawing.Point(4, -17);
             this.gMapMain.Margin = new System.Windows.Forms.Padding(4);
             this.gMapMain.MarkersEnabled = true;
             this.gMapMain.MaxZoom = 2;
@@ -1443,18 +1457,18 @@
             this.gMapMain.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapMain.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapMain.ShowTileGridLines = false;
-            this.gMapMain.Size = new System.Drawing.Size(491, 346);
+            this.gMapMain.Size = new System.Drawing.Size(491, 324);
             this.gMapMain.TabIndex = 33;
             this.gMapMain.Zoom = 0D;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(49)))));
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.patlama2_yes);
             this.panel3.Controls.Add(this.patlama1_yes);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label34);
             this.panel3.Controls.Add(this.patlama2_no);
             this.panel3.Controls.Add(this.patlama1_no);
@@ -1465,9 +1479,44 @@
             this.panel3.Size = new System.Drawing.Size(929, 390);
             this.panel3.TabIndex = 1000;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(497, 39);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(347, 263);
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            // 
+            // patlama2_yes
+            // 
+            this.patlama2_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_yes.BackgroundImage")));
+            this.patlama2_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama2_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama2_yes.Location = new System.Drawing.Point(309, 298);
+            this.patlama2_yes.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama2_yes.Name = "patlama2_yes";
+            this.patlama2_yes.Size = new System.Drawing.Size(67, 62);
+            this.patlama2_yes.TabIndex = 28;
+            this.patlama2_yes.TabStop = false;
+            // 
+            // patlama1_yes
+            // 
+            this.patlama1_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_yes.BackgroundImage")));
+            this.patlama1_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama1_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama1_yes.Location = new System.Drawing.Point(312, 96);
+            this.patlama1_yes.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama1_yes.Name = "patlama1_yes";
+            this.patlama1_yes.Size = new System.Drawing.Size(67, 62);
+            this.patlama1_yes.TabIndex = 27;
+            this.patlama1_yes.TabStop = false;
+            // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Location = new System.Drawing.Point(32, 213);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1475,105 +1524,129 @@
             this.panel5.Size = new System.Drawing.Size(212, 147);
             this.panel5.TabIndex = 25;
             // 
-            // panel4
+            // pictureBox2
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(32, 21);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(213, 159);
-            this.panel4.TabIndex = 24;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(206, 142);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // patlama2_no
+            // 
+            this.patlama2_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_no.BackgroundImage")));
+            this.patlama2_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama2_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama2_no.Location = new System.Drawing.Point(309, 298);
+            this.patlama2_no.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama2_no.Name = "patlama2_no";
+            this.patlama2_no.Size = new System.Drawing.Size(67, 62);
+            this.patlama2_no.TabIndex = 23;
+            this.patlama2_no.TabStop = false;
+            // 
+            // patlama1_no
+            // 
+            this.patlama1_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_no.BackgroundImage")));
+            this.patlama1_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.patlama1_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.patlama1_no.Location = new System.Drawing.Point(312, 96);
+            this.patlama1_no.Margin = new System.Windows.Forms.Padding(4);
+            this.patlama1_no.Name = "patlama1_no";
+            this.patlama1_no.Size = new System.Drawing.Size(67, 62);
+            this.patlama1_no.TabIndex = 22;
+            this.patlama1_no.TabStop = false;
             // 
             // chartAltitudeMain
             // 
-            chartArea5.AxisX.MajorGrid.Enabled = false;
-            chartArea5.AxisX.MajorTickMark.Enabled = false;
-            chartArea5.AxisY.MajorGrid.Enabled = false;
-            chartArea5.Name = "ChartArea1";
-            this.chartAltitudeMain.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartAltitudeMain.Legends.Add(legend5);
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorTickMark.Enabled = false;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.Name = "ChartArea1";
+            this.chartAltitudeMain.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartAltitudeMain.Legends.Add(legend1);
             this.chartAltitudeMain.Location = new System.Drawing.Point(552, 127);
             this.chartAltitudeMain.Margin = new System.Windows.Forms.Padding(4);
             this.chartAltitudeMain.Name = "chartAltitudeMain";
-            series5.BorderWidth = 3;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series5.MarkerStep = 2;
-            series5.Name = "Series1";
-            this.chartAltitudeMain.Series.Add(series5);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.Transparent;
+            series1.MarkerStep = 2;
+            series1.Name = "Series1";
+            this.chartAltitudeMain.Series.Add(series1);
             this.chartAltitudeMain.Size = new System.Drawing.Size(393, 199);
             this.chartAltitudeMain.TabIndex = 25;
             this.chartAltitudeMain.Text = "chart1";
             // 
             // chartAltitudePayload
             // 
-            chartArea6.AxisX.MajorGrid.Enabled = false;
-            chartArea6.AxisX.MajorTickMark.Enabled = false;
-            chartArea6.AxisY.MajorGrid.Enabled = false;
-            chartArea6.AxisY.MajorTickMark.Enabled = false;
-            chartArea6.Name = "ChartArea1";
-            this.chartAltitudePayload.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartAltitudePayload.Legends.Add(legend6);
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorTickMark.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorTickMark.Enabled = false;
+            chartArea2.Name = "ChartArea1";
+            this.chartAltitudePayload.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartAltitudePayload.Legends.Add(legend2);
             this.chartAltitudePayload.Location = new System.Drawing.Point(953, 127);
             this.chartAltitudePayload.Margin = new System.Windows.Forms.Padding(4);
             this.chartAltitudePayload.Name = "chartAltitudePayload";
-            series6.BorderWidth = 3;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartAltitudePayload.Series.Add(series6);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartAltitudePayload.Series.Add(series2);
             this.chartAltitudePayload.Size = new System.Drawing.Size(393, 193);
             this.chartAltitudePayload.TabIndex = 26;
             this.chartAltitudePayload.Text = "chart2";
             // 
             // chartPressureMain
             // 
-            chartArea7.AxisX.MajorGrid.Enabled = false;
-            chartArea7.AxisX.MajorTickMark.Enabled = false;
-            chartArea7.AxisY.MajorGrid.Enabled = false;
-            chartArea7.AxisY.MajorTickMark.Enabled = false;
-            chartArea7.Name = "ChartArea1";
-            this.chartPressureMain.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartPressureMain.Legends.Add(legend7);
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.MajorTickMark.Enabled = false;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.MajorTickMark.Enabled = false;
+            chartArea3.Name = "ChartArea1";
+            this.chartPressureMain.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartPressureMain.Legends.Add(legend3);
             this.chartPressureMain.Location = new System.Drawing.Point(552, 385);
             this.chartPressureMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartPressureMain.Name = "chartPressureMain";
-            series7.BorderWidth = 3;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartPressureMain.Series.Add(series7);
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartPressureMain.Series.Add(series3);
             this.chartPressureMain.Size = new System.Drawing.Size(402, 223);
             this.chartPressureMain.TabIndex = 1001;
             this.chartPressureMain.Text = "chart3";
             // 
             // chartPressurePayload
             // 
-            chartArea8.AxisX.MajorGrid.Enabled = false;
-            chartArea8.AxisX.MajorTickMark.Enabled = false;
-            chartArea8.AxisY.MajorGrid.Enabled = false;
-            chartArea8.AxisY.MajorTickMark.Enabled = false;
-            chartArea8.Name = "ChartArea1";
-            this.chartPressurePayload.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartPressurePayload.Legends.Add(legend8);
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisX.MajorTickMark.Enabled = false;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
+            chartArea4.AxisY.MajorTickMark.Enabled = false;
+            chartArea4.Name = "ChartArea1";
+            this.chartPressurePayload.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPressurePayload.Legends.Add(legend4);
             this.chartPressurePayload.Location = new System.Drawing.Point(953, 385);
             this.chartPressurePayload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartPressurePayload.Name = "chartPressurePayload";
-            series8.BorderWidth = 3;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartPressurePayload.Series.Add(series8);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartPressurePayload.Series.Add(series4);
             this.chartPressurePayload.Size = new System.Drawing.Size(393, 223);
             this.chartPressurePayload.TabIndex = 1002;
             this.chartPressurePayload.Text = "chart4";
@@ -1618,97 +1691,15 @@
             this.label36.TabIndex = 1006;
             this.label36.Text = "Basınç Görev";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(497, 39);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(347, 263);
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            // 
-            // patlama2_yes
-            // 
-            this.patlama2_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_yes.BackgroundImage")));
-            this.patlama2_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama2_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_yes.Location = new System.Drawing.Point(309, 298);
-            this.patlama2_yes.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama2_yes.Name = "patlama2_yes";
-            this.patlama2_yes.Size = new System.Drawing.Size(67, 62);
-            this.patlama2_yes.TabIndex = 28;
-            this.patlama2_yes.TabStop = false;
-            // 
-            // patlama1_yes
-            // 
-            this.patlama1_yes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_yes.BackgroundImage")));
-            this.patlama1_yes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama1_yes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_yes.Location = new System.Drawing.Point(312, 96);
-            this.patlama1_yes.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama1_yes.Name = "patlama1_yes";
-            this.patlama1_yes.Size = new System.Drawing.Size(67, 62);
-            this.patlama1_yes.TabIndex = 27;
-            this.patlama1_yes.TabStop = false;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 156);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(202, 142);
+            this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // patlama2_no
-            // 
-            this.patlama2_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama2_no.BackgroundImage")));
-            this.patlama2_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama2_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama2_no.Location = new System.Drawing.Point(309, 298);
-            this.patlama2_no.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama2_no.Name = "patlama2_no";
-            this.patlama2_no.Size = new System.Drawing.Size(67, 62);
-            this.patlama2_no.TabIndex = 23;
-            this.patlama2_no.TabStop = false;
-            // 
-            // patlama1_no
-            // 
-            this.patlama1_no.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patlama1_no.BackgroundImage")));
-            this.patlama1_no.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.patlama1_no.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.patlama1_no.Location = new System.Drawing.Point(312, 96);
-            this.patlama1_no.Margin = new System.Windows.Forms.Padding(4);
-            this.patlama1_no.Name = "patlama1_no";
-            this.patlama1_no.Size = new System.Drawing.Size(67, 62);
-            this.patlama1_no.TabIndex = 22;
-            this.patlama1_no.TabStop = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(12, 23);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(52, 46);
-            this.btnRefresh.TabIndex = 7;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(206, 142);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -1764,19 +1755,18 @@
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).EndInit();
             this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudeMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAltitudePayload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressureMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPressurePayload)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_yes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_yes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama2_no)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patlama1_no)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1876,7 +1866,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPressureMain;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPressurePayload;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox patlama2_yes;
         private System.Windows.Forms.PictureBox patlama1_yes;
         private System.Windows.Forms.Label chartAltitudeMainTitle;
@@ -1892,8 +1881,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -24,11 +24,7 @@ namespace RocketUI
 {
     public partial class Form1 : Form
     {
-        /*
-         * mapler eklenecek 
-         * tasarım renkleri son karar verilecek
-         * kodun eksik fonksiyonları tamamlanacak
-         */
+        
 
 
 
@@ -400,10 +396,7 @@ namespace RocketUI
 
 
         #endregion
-        /*
-         * Event kısmı kaldı
-         * map koyulacak
-         */
+        
 
 
         // ekrandaki timer metodu
